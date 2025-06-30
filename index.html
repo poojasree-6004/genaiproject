@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Story Generator</title>
+    <style>
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f0f4f8;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container{
+            background-color: #fff;
+            padding: 40px 50px;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+            width: 100%;
+            max-width: 600px;
+            text-align: center;
+        }
+        h2{
+            color: #333;
+            margin-bottom: 20px;
+        }
+        textarea{
+            width: 100%;
+            padding: 15px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            min-height: 100px;
+        }
+        input[type="submit"]{
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 1em;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        h3{
+            margin-top: 30px;
+            color: #444;
+        }
+        p{
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #007bff;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Simple Story Generator</h2>
+        <form method="POST">
+            <textarea name="prompt" placeholder="Enter your story prompt here..."></textarea><br>
+            <input type="submit" value="Generate Story">
+        </form>
+        {% if story %}
+            <h3>Generated Story:</h3>
+            <p>{{ story }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
