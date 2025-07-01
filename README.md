@@ -17,7 +17,7 @@ aiproject/
 ## 🔧 Installation
 ### 1. Clone the repository
 git clone https://github.com/poojasree-6004/genaiproject.git
-cd aiproject
+cd genaiproject
 ### 2. Create a virtual environment
 python -m venv venv
 ### 3. Activate the environment
